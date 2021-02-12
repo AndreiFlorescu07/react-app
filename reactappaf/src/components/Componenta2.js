@@ -40,11 +40,12 @@ export const Componenta3= ({text3})=>{
     const style={
                 backgroundColor:culoareProfil,
                 borderRadius:'50%',
-                hight:'100%'
+                hight:'25px',
+                width:'25px'
                 };
 
         return (
-        <div style={{hight:'50px'}}> 
+        <div style={{hight:'50px', backgroundColor:'yellowgreen'}}> 
             <span style={style}></span>
             <span>
                 <p>{titlu}</p>
@@ -54,8 +55,8 @@ export const Componenta3= ({text3})=>{
         )
     }
     const listaA=listaProduse.map((item)=>{
-        return <ListItem titlu='fata1' descriere='frumoasa' culoareProfil='white'/>
+        return <ListItem titlu={item.titlu} descriere={item.descriere} culoareProfil={item.culoareProfil}/>
     })
 
-    return(<div> {text3}</div>)
+    return(<div> {listaA}</div>)
 }
